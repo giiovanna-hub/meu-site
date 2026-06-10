@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>💕 Nossa história 💕</title>
+
+    <!-- Fontes do Google -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            margin: 0;
+            font-family: "Quicksand", sans-serif;
+            background: #fff5f7;
+            color: #444;
+        }
+         
+         .hearts-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    overflow: hidden;
+}
+
+.heart {
+    position: absolute;
+    color: #ff6b9a;
+    font-size: 20px;
+    animation: cair 5s linear infinite;
+}
+
+@keyframes cair {
+    from {
+        transform: translateY(-10vh);
+        opacity: 1;
+    }
+    to {
+        transform: translateY(110vh);
+        opacity: 0;
+    }
+}
+
+           .galeria {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+/* 📸 estilo polaroid */
+.polaroid {
+    background: white;
+    padding: 12px 12px 20px 12px;
+    width: 200px;
+    text-align: center;
+    border-radius: 6px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+    transition: 0.3s;
+}
+
+/* imagem dentro da polaroid */
+.polaroid img {
+    width: 100%;
+    border-radius: 4px;
+}
+
+/* legenda */
+.polaroid figcaption {
+    margin-top: 10px;
+    font-size: 0.85em;
+    color: #555;
+}
+
+/* efeito hover */
+.polaroid:hover {
+    transform: scale(1.05) rotate(-1deg);
+}
+        header {
+            background: linear-gradient(135deg, #ffb6c1, #ffd1dc);
+            text-align: center;
+            padding: 60px 20px;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 4em;
+            font-family: "Dancing Script", cursive;
+            color: #2c2c2c;
+        }
+
+        header p {
+            font-size: 1.3em;
+            margin-top: 10px;
+            color: #2c2c2c;
+        }
+
+        section {
+            max-width: 800px;
+            margin: auto;
+            padding: 40px 20px;
+        }
+
+        h2 {
+            color: #d85c7a;
+            font-family: "Dancing Script", cursive;
+            font-size: 2.4em;
+            margin-bottom: 15px;
+        }
+
+        .contador {
+            background: white;
+            padding: 20px;
+            border-radius: 20px;
+            text-align: center;
+            font-size: 1.4em;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+        }
+
+        .carta {
+            background: white;
+            padding: 20px;
+            border-radius: 20px;
+            margin-top: 20px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+        }
+
+        button {
+            background: #ff8fab;
+            color: white;
+            border: none;
+            padding: 12px 22px;
+            border-radius: 12px;
+            cursor: pointer;
+            font-family: "Quicksand", sans-serif;
+            font-size: 1em;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            transform: scale(1.05);
+            opacity: 0.95;
+        }
+
+        #mensagem {
+            display: none;
+            margin-top: 20px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 25px;
+            color: #888;
+            font-size: 0.95em;
+        }
+    </style>
+</head>
+<body>
+<div class="hearts-container"></div> 
+<header>
+    <h1>💕 Giovanna & Luiz 💕</h1>
+    <p>Desde 22 de setembro de 2024 criando o nosso pequeno universo!</p>
+</header>
+<section style="text-align: center; margin-top: 30px;">
+    <img src="imagens/capa.jpg"
+         alt="Nós dois"
+         style="width: 300px;
+                border-radius: 20px;
+                box-shadow: 0 6px 18px rgba(0,0,0,0.15);">
+</section>
+<section>
+    <h2>⏳ Estamos juntos há...</h2>
+    <div class="contador">
+        <p id="tempo"></p>
+    </div>
+</section>
+
+<section>
+    <h2>📖 Nossa História</h2>
+
+    <p>
+        Tudo começou quando você respondeu ao meu story no instagram e eu te respondi ❤️. 
+    </p>
+        Nós começamos a conversar e nunca mais paramos!
+
+    <p>
+        Nosso primeiro encontro foi incrível! Comemos sushi, rimos, nos conhecemos mais, você até conheceu os meus pais logo de início. 
+    </p>
+Eu lembro de ter te achado um homem muito lindo e nosso início parecia perfeito demais para ser verdade!
+    <p>
+        Desde então, cada momento ao seu lado se tornou uma memória especial e inesquecível. ❤️
+    </p>
+</section>
+<section>
+    <h2>✨ Linha do Tempo</h2>
+
+    <p>🌷 <strong>25/08/2024:</strong> Nosso primeiro encontro ❤️ </p>
+    <p>💖 <strong>08/09/2024:</strong> Nosso primeiro beijo ❤️ </p>
+    <p>🎬 <strong>08/09/2024:</strong> Nosso primeiro filme juntos ❤️ </p>
+    <p>✈️ <strong>22/09/2024:</strong> Nosso pedido de namoro ❤️ </p>
+</section>
+<section>
+    <h2>📸 Nossos Momentos</h2>
+
+   <div class="galeria">
+
+    <figure class="polaroid">
+        <img src="imagens/foto1.jpg" alt="Foto 1">
+        <figcaption>Nosso final de semana 💕</figcaption>
+    </figure>
+
+    <figure class="polaroid">
+        <img src="imagens/foto2.jpg" alt="Foto 2">
+        <figcaption>Dia especial ✨</figcaption>
+    </figure>
+
+    <figure class="polaroid">
+        <img src="imagens/foto3.jpg" alt="Foto 3">
+        <figcaption>Momentinho nosso 🥰</figcaption>
+    </figure>
+ 
+    <figure class="polaroid">
+        <img src="imagens/foto4.jpg" alt="Foto 3">
+        <figcaption>Nosso Natal mágico ❤️</figcaption>
+    </figure>
+
+    <figure class="polaroid">
+        <img src="imagens/foto5.jpg" alt="Foto 3">
+        <figcaption>Nosso primeiro Ano Novo ✨</figcaption>
+    </figure>
+
+    <figure class="polaroid">
+        <img src="imagens/foto6.jpg" alt="Foto 3">
+        <figcaption>Nosso primeiro Dia dos momos ❤️</figcaption>
+    </figure>
+
+    <figure class="polaroid">
+        <img src="imagens/foto7.jpg" alt="Foto 3">
+        <figcaption>Nosso Ano Novo na Praia 💕</figcaption>
+    </figure>
+
+    <figure class="polaroid">
+        <img src="imagens/foto8.jpg" alt="Foto 3">
+        <figcaption>Amo nossas fotos arrumadinhos 💕</figcaption>
+    </figure>
+
+    <figure class="polaroid">
+        <img src="imagens/foto9.jpg" alt="Foto 3">
+        <figcaption>Sabadou especial ✨</figcaption>
+    </figure>
+
+</div>
+</section>
+<section>
+    <h2>✉️ Uma carta para o meu amor ❤️</h2>
+    <button onclick="mostrarMensagem()">Abrir carta 💌</button>
+
+    <div id="mensagem" class="carta">
+        <p>
+            Meu amor,
+</p>
+Desde o início do nosso relacionamento, começamos a traçar uma história que jamais poderíamos imaginar, apenas sentir. Naquele momento, talvez não imaginássemos quantos sorrisos, abraços, conversas (boas ou ruins) e lembranças especiais construiríamos juntos.
+</p>
+Momo, cada dia ao seu lado me ensina que o amor está nos pequenos e meros detalhes: nas mensagens de carinho, nas risadas e gracinhas juntos e na certeza de que mesmo nos momentos difíceis e nos desafios, nós ainda nos escolhemos. 
+</p>
+Há dias em que estamos muito carinhosos, dias em que precisamos de paciência, dias em que precisamos nos perdoar, dias em que precisamos nos acalmar e dias em que nós precisamos recomeçar. Essas são as infinitas fases que um relacionamento passa e quando nós escolhemos ficar, nosso vínculo se fortalece cada vez mais.
+</p>
+Nós transformamos dias comuns em momentos inesquecíveis e fizemos do carinho e da amizade a base do nosso relacionamento. Sou grata por cada gesto de cuidado, por cada palavra de incentivo e pelo seu esforço em me fazer feliz.
+</p>
+Quero que você saiba que, independentemente do tempo que estejamos passando, meu desejo é continuar construindo histórias ao seu lado, celebrando nossas conquistas, aprendendo com os desafios e fazendo do nosso amor um lugar de paz, alegria e acolhimento.
+</p>
+Que o nosso "para sempre" seja feito de muitos amanheceres, viagens, conquistas, abraços apertados e motivos para sorrir. E que nunca nos falte paciência, respeito, carinho, gentileza, companheirismo e, acima de tudo, amor nos nossos gestos. 
+</p>
+Obrigada por fazer parte da minha vida. Que esta seja apenas uma das muitas cartas que possamos escrever.
+
+</p>
+Te amo infinitamente 💕.
+
+        </p>
+    </div>
+</section>
+
+<footer>
+    Feito com muito❤️ especialmente para nós dois.
+</footer>
+
+<script>
+function mostrarMensagem() {
+    const carta = document.getElementById("mensagem");
+
+    if (carta.style.display === "block") {
+        carta.style.display = "none";
+    } else {
+        carta.style.display = "block";
+    }
+}
+
+window.onload = function () {
+
+    const inicio = new Date("2024-09-22");
+
+    function atualizarContador() {
+        const hoje = new Date();
+
+        let anos = hoje.getFullYear() - inicio.getFullYear();
+        let meses = hoje.getMonth() - inicio.getMonth();
+        let dias = hoje.getDate() - inicio.getDate();
+
+        if (dias < 0) {
+            meses--;
+            const ultimoMes = new Date(hoje.getFullYear(), hoje.getMonth(), 0);
+            dias += ultimoMes.getDate();
+        }
+
+        if (meses < 0) {
+            anos--;
+            meses += 12;
+        }
+
+       document.getElementById("tempo").innerHTML =
+            `💖 ${anos} anos, ${meses} meses e ${dias} dias 💖`;
+    }
+
+    atualizarContador();
+};
+
+function criarCoracao() {
+    const heart = document.createElement("div");
+    heart.classList.add("heart");
+    heart.innerHTML = "💖";
+
+    heart.style.left = Math.random() * 100 + "vw";
+    heart.style.animationDuration = (3 + Math.random() * 3) + "s";
+
+    document.querySelector(".hearts-container").appendChild(heart);
+
+    setTimeout(() => {
+        heart.remove();
+    }, 2000);
+}
+
+setInterval(criarCoracao, 400);
+
+</script>
+
+</body>
+</html>
