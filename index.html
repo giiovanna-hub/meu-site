@@ -158,9 +158,34 @@
             color: #888;
             font-size: 0.95em;
         }
+#botaoMusica{
+    background: linear-gradient(45deg,#ff6b9a,#ff8fab);
+    color:white;
+    border:none;
+    padding:15px 25px;
+    border-radius:30px;
+    font-size:18px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+#botaoMusica:hover{
+    transform:scale(1.05);
+}
+#motivo{
+    font-size:1.3em;
+    color:#d85c7a;
+    min-height:80px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    padding:15px;
+}
     </style>
 </head>
 <body>
+
 <div class="hearts-container"></div> 
 <header>
     <h1>💕 Giovanna & Luiz 💕</h1>
@@ -173,6 +198,18 @@
                 border-radius: 20px;
                 box-shadow: 0 6px 18px rgba(0,0,0,0.15);">
 </section>
+<!-- Música de fundo -->
+<audio id="musica" loop>
+    <source src="musicas/nossa-musica.mp3" type="audio/mpeg">
+    Seu navegador não suporta áudio.
+</audio>
+
+<div style="text-align:center; margin:20px;">
+    <button onclick="tocarMusica()" id="botaoMusica">
+         Tocar música 💕
+    </button>
+</div>
+
 <section>
     <h2>⏳ Estamos juntos há...</h2>
     <div class="contador">
@@ -195,6 +232,19 @@ Eu lembro de ter te achado um homem muito lindo e nosso início parecia perfeito
     <p>
         Desde então, cada momento ao seu lado se tornou uma memória especial e inesquecível. ❤️
     </p>
+</section>
+<section>
+    <h2>💖 Motivos pelos quais eu te amo 💖</h2>
+
+    <div class="contador">
+        <p id="motivo">
+            Clique para descobrir um motivo especial! 💕
+        </p>
+
+        <button onclick="mostrarMotivo()" id="botaoMotivo">
+    💌 Clique para descobrir um motivo especial! 
+</button>
+    </div>
 </section>
 <section>
     <h2>✨ Linha do Tempo</h2>
@@ -226,12 +276,12 @@ Eu lembro de ter te achado um homem muito lindo e nosso início parecia perfeito
  
     <figure class="polaroid">
         <img src="imagens/foto4.jpg" alt="Foto 3">
-        <figcaption>Nosso Natal Mágico ❤️</figcaption>
+        <figcaption>Nosso Natal mágico ❤️</figcaption>
     </figure>
 
     <figure class="polaroid">
         <img src="imagens/foto5.jpg" alt="Foto 3">
-        <figcaption>Nosso Primeiro Ano Novo ✨</figcaption>
+        <figcaption>Nosso primeiro Ano Novo ✨</figcaption>
     </figure>
 
     <figure class="polaroid">
@@ -344,7 +394,64 @@ function criarCoracao() {
     }, 2000);
 }
 
-setInterval(criarCoracao, 400);
+let tocando = false;
+
+function tocarMusica() {
+    const musica = document.getElementById("musica");
+    const botao = document.getElementById("botaoMusica");
+
+    if (!tocando) {
+        musica.play();
+        botao.innerHTML = "Pausar música 💕";
+        tocando = true;
+    } else {
+        musica.pause();
+        botao.innerHTML = "Tocar música 💕";
+        tocando = false;
+    }
+}
+const motivos = [
+"💕 Porque você entrou na minha vida de um jeito inesperado.",
+"😊 Porque o seu sorriso me faz sorrir.",
+"🤗 Porque o seu abraço sempre parece confortável.",
+"❤️ Porque você se importa comigo.",
+"🌻 Porque enfrentamos os desafios juntos.",
+"✨ Porque você me incentiva a ser uma pessoa melhor.",
+"💍 Porque escolhemos um ao outro todos os dias.",
+"♾️ Porque meu amor por você é enorme."
+];
+
+let indice = 0;
+
+function mostrarMotivo() {
+
+    const texto = document.getElementById("motivo");
+    const botao = document.getElementById("botaoMotivo");
+
+    if (indice < motivos.length) {
+
+        texto.innerHTML = motivos[indice];
+        indice++;
+
+        if (indice === motivos.length) {
+            botao.innerHTML = "💖 Um último motivo...";
+        }
+
+    } else {
+
+        texto.innerHTML =
+        "💕 E o maior motivo de todos: quero continuar construindo um futuro ao seu lado, escolhendo você todos os dias. Te amo, Momo! 💕";
+
+        botao.innerHTML = "💌 Clique para recomeçar!";
+
+        indice = -1;
+    }
+
+    if (indice === -1) {
+        indice = 0;
+        botao.innerHTML = "💌 Clique para descobrir um motivo especial!";
+    }
+}setInterval(criarCoracao, 400);
 
 </script>
 
